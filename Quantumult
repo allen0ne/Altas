@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 
 [server_remote]
 https://dash.pqjc.site/api/v1/client/subscribe?token=c74d488b19189e94dc803d9b1f444a8c, tag=赔钱, update-interval=172800, opt-parser=false, enabled=true
-https://oss5-china-east-bucket.selectgroup.click/api/graphql?token=c34eabcbeb5b107838af80a01dae39fe&flag=quantumult%20x, tag=ouo, update-interval=172800, opt-parser=false, enabled=true
+https://oss1-china-alibaba-bucket.selectgroup.click/api/graphql?token=4ab099be5428b2889b74e7ff61a66d1d&flag=quantumult%20x, tag=ouo, update-interval=172800, opt-parser=false, enabled=true
 https://sub.godya.cc/data/resources/link/obtain?token=51ca26f2fc8b04520c4fab624566cef5, tag=NiceDuck, update-interval=172800, opt-parser=false, enabled=true
 # > 魔法仅供临时使用from@Ruk1ng001
 
