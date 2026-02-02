@@ -90,7 +90,7 @@ server=/*.aliyun.com/223.5.5.5
 server=/*.taobao.com/223.5.5.5
 
 # > DoH (加密 DNS，防止运营商劫持，解析国外域名更准)
-doh-server=https://dns.alidns.com/dns-query,doh-server=https://doh.pub/dns-query,doh-server=https://1.1.1.1/dns-query
+doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.1.1.1/dns-query
 # 备用 Google DoH (如果能连通)
 ;doh-server=https://dns.google/dns-query
 
