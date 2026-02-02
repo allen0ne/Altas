@@ -24,13 +24,13 @@ udp_drop_list = STUN, QUIC
 
 
 [task_local]
-
-# > 请手动添加下面的订阅（流媒体Task订阅集合）
-; https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/UI-Action.json
-# > 流媒体解锁查询
-event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=arrowtriangle.right.square.system, enabled=true
-# > IP纯净度查询
-event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点纯净度详情, img-url=checkmark.shield.fill.system
+# > 定时任务
+# 流媒体解锁查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png, enabled=true
+# IP纯净度查询
+event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点纯净度详情, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+# GeoIP 数据库自动更新 
+0 0 1 * * https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/QuantumultX-IP-Update.js, tag=GeoIP更新, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Update.png, enabled=true
 
 
 [rewrite_local]
@@ -38,41 +38,28 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 
 
 [rewrite_remote]
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/XiaoHongShuAds.conf, tag=小红书去广告@ddgksf2013, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf, tag=中国联通去广告@ddgksf2013, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Applet.conf, tag=微信小程序去广告@ddgksf2013, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, tag=酷安去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
-https://ddgksf2013.top/scripts/zhihu.ads.js, tag=知乎去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepAds.conf, tag=keep, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Modules/main/Adblock.sgmodule, tag=去广告模块, update-interval=172800, opt-parser=true, enabled=false
-https://ddgksf2013.top/module/JavDB.WebEnhance.sgmodule, tag=JAV, update-interval=172800, opt-parser=true, enabled=true
-
-# ======= 会员解锁 ======= #
-https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩广告净化Lite, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=Spotify音乐VIP[音质≤高]@app2smile, update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf, tag=墨鱼专属VIP, update-interval=86400, opt-parser=false, enabled=true
-
-
-# ======= 广告净化 ======= #
-https://whatshub.top/rewrite/adultraplus.conf, tag=APP启动页去广告ultra+, update-interval=172800, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/XiaoYuZhouAds.conf, tag=小宇宙, update-interval=172800, opt-parser=true, enabled=true
-https://ddgksf2013.top/rewrite/StartUpAds.conf, tag=墨鱼去开屏2.0, update-interval=86400, opt-parser=true, enabled=true
+# 去广告
+https://ddgksf2013.top/rewrite/XiaoHongShuAds.conf, tag=小红书去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf, tag=中国联通去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Applet.conf, tag=微信小程序去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, tag=酷安去广告, update-interval=86400, opt-parser=true, enabled=true
+https://ddgksf2013.top/scripts/zhihu.ads.js, tag=知乎去广告, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepAds.conf, tag=Keep去广告, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/XiaoYuZhouAds.conf, tag=小宇宙去广告, update-interval=172800, opt-parser=true, enabled=true
+https://ddgksf2013.top/rewrite/StartUpAds.conf, tag=通用开屏去广告, update-interval=86400, opt-parser=true, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf, tag=彩云天气净化, update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=油管去广告@Maasea, update-interval=86400, opt-parser=false, enabled=true
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=Youtube去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/WeiboAds.conf, tag=微博去广告, update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/AmapAds.conf, tag=高德地图净化[卸载重装], update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/NeteaseAds.conf, tag=网易云净化, update-interval=86400, opt-parser=false, enabled=false
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/GoofishAds.conf, tag=闲鱼净化[卸载重装], update-interval=86400, opt-parser=false, enabled=true
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/AmapAds.conf, tag=高德地图净化, update-interval=86400, opt-parser=false, enabled=true
+https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/GoofishAds.conf, tag=闲鱼净化, update-interval=86400, opt-parser=false, enabled=true
 
-
-# ======= 网页优化 ======= #
-https://github.com/ddgksf2013/Rewrite/raw/master/Html/General.conf, tag=Google重定向@DivineEngine, update-interval=86400, opt-parser=false, enabled=true
-
-
-# ======= 功能增强 ======= #
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/XiaoHongShuAds.conf, tag=小红书净化+去水印, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/UnblockURLinWeChat.conf, tag=微信解锁被屏蔽的URL@zZPiglet, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJS商店版@chavyleung, update-interval=86400, opt-parser=false, enabled=true
+# 功能增强与VIP
+https://ddgksf2013.top/module/JavDB.WebEnhance.sgmodule, tag=JavDB优化, update-interval=172800, opt-parser=true, enabled=true
+https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩哔哩净化, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=Spotify增强, update-interval=86400, opt-parser=false, enabled=true
+https://github.com/ddgksf2013/Rewrite/raw/master/Html/General.conf, tag=Google重定向, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/UnblockURLinWeChat.conf, tag=微信Url重定向, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJS, update-interval=86400, opt-parser=false, enabled=true
 
 
 [server_local]
@@ -84,23 +71,33 @@ https://sub.godya.cc/data/resources/link/obtain?token=51ca26f2fc8b04520c4fab6245
 # > 魔法仅供临时使用from@Ruk1ng001
 
 [dns]
-
-;prefer-doh3
-;doh-server = https://223.5.5.5/dns-query, https://223.6.6.6/dns-query
-# > QuantumultX开启IPV6方法，删去下面的「no-ipv6」，在「VPN」栏中，开启「兼容性增强」
+# > DNS 查询设置
+# 禁用 IPv6
 no-ipv6
 no-system
-#server=223.5.5.5
+
+# > 默认 DNS 服务器
+server=223.5.5.5
 server=119.29.29.29
-server=114.114.114.114
-server=/*.icloud.com/119.29.29.29
-server=/*.icloud.com.cn/119.29.29.29
+
+# > 指定域名解析 (修正国内服务解析)
+server=/*.icloud.com/223.5.5.5
+server=/*.icloud.com.cn/223.5.5.5
+server=/*.apple.com/223.5.5.5
 server=/*.tencent.com/119.29.29.29
 server=/*.weixin.com/119.29.29.29
+server=/*.aliyun.com/223.5.5.5
+server=/*.taobao.com/223.5.5.5
+
+# > DoH (加密 DNS，防止运营商劫持，解析国外域名更准)
+doh-server=https://dns.alidns.com/dns-query
+doh-server=https://doh.pub/dns-query
+doh-server=https://1.1.1.1/dns-query
+# 备用 Google DoH (如果能连通)
+;doh-server=https://dns.google/dns-query
 
 [policy]
 static=emby, server-tag-regex=(?<!\d)0\.0?1(?!\d), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-
 static=苹果服务, direct, 香港节点, 台湾节点, 美国节点, 日本节点, 狮城节点, proxy, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 static=全球加速, 自动选择, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 static=哔哩哔哩, direct, 香港节点, 台湾节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
@@ -120,36 +117,41 @@ url-latency-benchmark=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|Ame
 
 
 [filter_remote]
-https://ddgksf2013.top/filter/Ai.yaml, tag=AI, force-policy=台湾节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+# > 分流规则 (Filter) - 顺序：拦截 -> 修正 -> 专用 -> 通用
+# 1. 广告拦截与修正
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+
+# 2. 特定应用分流
+https://ddgksf2013.top/filter/Ai.yaml, tag=AI服务, force-policy=台湾节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=声田音乐, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Filter/master/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag=哔哩哔哩, force-policy=哔哩哔哩, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
+
+# 3. 通用分流
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 
-
-
 [filter_local]
-
-DOMAIN-KEYWORD,ouonet,emby
-
-DOMAIN-SUFFIX,bing.com,DIRECT
+# > 本地分流规则
+DOMAIN-KEYWORD, ouonet, emby
+DOMAIN-SUFFIX, bing.com, DIRECT
 host-keyword, msn, direct
 host-keyword, live, direct
 host-keyword, microsoft, direct
 host-keyword, windows, direct
 
-
-# > 一些比较容易忽视的分流
-
-host, ad.12306.cn, direct
-host, sdkapp.uve.weibo.com, direct
-host-keyword, github, proxy
+# > 局域网与国内 GeoIP (重要)
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+geoip, cn, direct
+final, 兜底分流
 
 # > local
 ip-cidr, 10.0.0.0/8, direct
@@ -161,12 +163,9 @@ ip-cidr, 182.254.116.0/24, direct
 geoip, cn, direct
 final, 兜底分流
 
-
 [http_backend]
-
-# > Boxjs设置，改为使用http backend方式，访问地址改为http://127.0.0.1:9999，更新配置后请长按风车-更新，然后重启代理
-# > BoxJs相关教程参考「https://docs.boxjs.app」
-https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=boxjs.com, tag=BoxJS, path=^/, enabled=false
+# > BoxJS http_backend 设置
+https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=boxjs.com, tag=BoxJS, path=^/, enabled=true
 
 
 
@@ -177,4 +176,4 @@ p12 = MIILuwIBAzCCC4UGCSqGSIb3DQEHAaCCC3YEggtyMIILbjCCBccGCSqGSIb3DQEHBqCCBbgwgg
 skip_validating_cert = true
 force_sni_domain_name = false
 
-hostname = -*.fcbox.com, -*huami.com, -*amemv.com, -*snssdk.com, -www.google.com
+hostname = *.google.cn, *.googlevideo.com, boxjs.com, boxjs.net
