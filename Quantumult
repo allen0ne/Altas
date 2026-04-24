@@ -39,6 +39,7 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 
 [rewrite_remote]
 # 去广告
+https://ddgksf2013.top/rewrite/XiaoHongShuBlockVideo.conf, tag=xhs, update-interval=172800, opt-parser=true, enabled=true
 https://ddgksf2013.top/rewrite/XiaoHongShuAds.conf, tag=小红书去广告, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf, tag=中国联通去广告, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Applet.conf, tag=微信小程序去广告, update-interval=86400, opt-parser=false, enabled=true
@@ -65,10 +66,9 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 [server_local]
 
 [server_remote]
-https://www.djjc.cfd/api/v1/client/subscribe?token=88fb09057e854add9843a6905249f729&flag=quantumult%20x, tag=顶级, update-interval=172800, opt-parser=true, enabled=true
-https://dash.xn--cp3a08l.com/api/v1/pq/c74d488b19189e94dc803d9b1f444a8c, tag=赔钱, update-interval=172800, opt-parser=false, enabled=true
-https://oss-china-bucket.c1-click.selectgroup.click/api/graphql?token=4ab099be5428b2889b74e7ff61a66d1d, tag=OuO, update-interval=172800, opt-parser=false, enabled=true
 https://sub.godya.cc/data/resources/link/obtain?token=51ca26f2fc8b04520c4fab624566cef5, tag=好鸭, update-interval=172800, opt-parser=false, enabled=true
+https://oss-china-bucket.c1-click.selectgroup.click/api/graphql?token=4ab099be5428b2889b74e7ff61a66d1d, tag=OuO, update-interval=172800, opt-parser=false, enabled=true
+https://dash.xn--cp3a08l.com/api/v1/pq/c74d488b19189e94dc803d9b1f444a8c, tag=赔钱, update-interval=172800, opt-parser=false, enabled=true
 
 
 [dns]
