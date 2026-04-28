@@ -22,8 +22,6 @@ udp_drop_list = 443, STUN, QUIC
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png, enabled=true
 # > IP纯净度查询
 event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点纯净度详情, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png, enabled=true
-# > GeoIP 数据库自动更新 
-0 0 1 * * https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb, tag=GeoIP更新, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Update.png, enabled=true
 
 
 [rewrite_local]
