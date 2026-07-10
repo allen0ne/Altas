@@ -116,12 +116,10 @@ static=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(�
 
 
 [filter_remote]
-https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/refs/heads/main/rules/quantumult-x/all.list, tag=ai, force-policy=狮城节点, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/refs/heads/main/rules/quantumult-x/all.list, tag=ai, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 # > 分流规则 (Filter) - 顺序：拦截 -> 修正 -> 专用 -> 通用
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-
-https://ddgksf2013.top/filter/Ai.yaml, tag=AI服务, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=声田音乐, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
