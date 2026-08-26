@@ -16,18 +16,15 @@ dns_exclusion_list=*.10099.com.cn, *.cmpassport.com, *.jegotrip.com.cn, *.icitym
 # > udp_drop_list 可直接屏蔽 STUN、QUIC 等协议的数据包
 udp_drop_list = 443, STUN, QUIC
 
-
 [task_local]
-
+# > 网速测试
 event-interaction https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, tag=⚡️ Net Speed, img-url=bolt.square.fill.system, enabled=true
 # > 流媒体解锁查询
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png, enabled=true
 # > IP纯净度查询
 event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点纯净度详情, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png, enabled=true
 
-
 [rewrite_local]
-
 
 [rewrite_remote]
 https://ddgksf2013.top/rewrite/CaiXinAds.conf, tag=财新, update-interval=172800, opt-parser=true, enabled=true
