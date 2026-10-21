@@ -54,10 +54,10 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 [server_local]
 
 [server_remote]
-https://c7a91e3b-84d2-4c6f-9b71-2e8d4a6f3c11.com/sabusuku?token=55c3f0cc341a3dbbc28d5df0bbaeff21, tag=cat, update-interval=172800, opt-parser=true, enabled=false
 https://oss1-china-alibaba-bucket.selectgroup.click/api/graphql?token=4ab099be5428b2889b74e7ff61a66d1d, tag=OuO, update-interval=172800, opt-parser=true, enabled=true
 https://dash.xn--cp3a08l.com/api/v1/pq/c74d488b19189e94dc803d9b1f444a8c, tag=赔钱, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml#delreg=.*&rename=@tg%40ddgksf2021-+@num-$index7, tag=墨鱼临时订阅[可选], update-interval=3600, opt-parser=true, enabled=false
+https://c7a91e3b-84d2-4c6f-9b71-2e8d4a6f3c11.com/sabusuku?token=55c3f0cc341a3dbbc28d5df0bbaeff21, tag=cat, update-interval=172800, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml#delreg=.*&rename=@tg%40ddgksf2021-+@num-$index7, tag=墨鱼临时订阅, update-interval=3600, opt-parser=true, enabled=false
 
 [dns]
 no-ipv6
@@ -76,38 +76,42 @@ doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.
 
 [policy]
 static=emby, proxy, direct,server-tag-regex=(?<!\d)0\.0?1(?!\d), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-static=苹果服务, direct, proxy, 香港节点, 台湾节点, 美国节点, 日本节点, 狮城节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-static=哔哩哔哩, direct, 香港节点, 台湾节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
-static=声田音乐, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
-static=国际媒体, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
-static=兜底分流, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
-static=自动选择, proxy, 美国节点,server-tag-regex=^(?!.*(?:网易|墨鱼)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 菲律宾节点, 印度节点, 韩国节点, 德国节点, 英国节点, 土耳其节点, 尼日利亚节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 static=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 static=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan|Tai Wan))^((?!(港|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
 static=日本节点, server-tag-regex=(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
 static=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 static=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-
+static=菲律宾节点, server-tag-regex=(?i)(菲律宾|Philippines|AnyTLS\.PH), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Philippines.png
+static=印度节点, server-tag-regex=(?i)(印度|India|AnyTLS\.IN), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
+static=韩国节点, server-tag-regex=(?i)(韩国|韓國|Korea|AnyTLS\.KR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+static=德国节点, server-tag-regex=(?i)(德国|德國|Germany|AnyTLS\.DE), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
+static=英国节点, server-tag-regex=(?i)(英国|英國|United Kingdom|AnyTLS\.UK), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
+static=土耳其节点, server-tag-regex=(?i)(土耳其|Turkey|Türkiye|AnyTLS\.TR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
+static=尼日利亚节点, server-tag-regex=(?i)(尼日利亚|尼日利亞|Nigeria|AnyTLS\.NG), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Africa_Map.png
 [filter_remote]
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
-https://ddgksf2013.top/filter/Ai.yaml, tag=ai, force-policy=狮城节点, update-interval=172800, opt-parser=true, enabled=true
+https://ddgksf2013.top/filter/Ai.yaml, tag=ai, force-policy=韩国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list, tag=GitHub, force-policy=美国节点, update-interval=604800, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=声田音乐, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag=哔哩哔哩, force-policy=哔哩哔哩, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag=哔哩哔哩, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 
 [filter_local]
+host-suffix, ddgksf2013.top, proxy
+host, sdkapp.uve.weibo.com, direct
 host, ad.12306.cn, direct
 host-keyword, sooplive, direct
-host-keyword, cloudflare, 美国节点
+host-keyword, cloudflare, proxy
 host-keyword, bitwarden, direct
+host, pass.saxinx.cn, proxy
+host-keyword, yrfmba, 兜底分流
 host-keyword, amazon, direct
 host-keyword, ouonet, emby
 host-keyword, github, proxy
