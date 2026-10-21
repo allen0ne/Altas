@@ -104,14 +104,10 @@ https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.l
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 
 [filter_local]
-host-suffix, ddgksf2013.top, proxy
-host, sdkapp.uve.weibo.com, direct
 host, ad.12306.cn, direct
 host-keyword, sooplive, direct
-host-keyword, cloudflare, proxy
+host-keyword, cloudflare, 美国节点
 host-keyword, bitwarden, direct
-host, pass.saxinx.cn, proxy
-host-keyword, yrfmba, 兜底分流
 host-keyword, amazon, direct
 host-keyword, ouonet, emby
 host-keyword, github, proxy
