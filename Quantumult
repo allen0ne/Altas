@@ -16,7 +16,7 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 [rewrite_local]
 
 [rewrite_remote]
-https://ddgksf2013.top/rewrite/BiliBiliAdsLite.conf, tag=哔哩哔哩净化Lite[可选], update-interval=86400, opt-parser=false, enabled=false
+https://ddgksf2013.top/rewrite/BiliBiliAdsLite.conf, tag=哔哩哔哩净化Lite, update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/amiglistimo/Quantumult-X/refs/heads/main/Rewrite/NSFW.conf, tag=NSFW, update-interval=172800, opt-parser=true, enabled=false
 https://ddgksf2013.top/scripts/bdmap.ads.js, tag=百度地图去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf, tag=豆瓣网页观影快捷跳转, update-interval=86400, opt-parser=false, enabled=true
