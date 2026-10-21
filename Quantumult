@@ -95,24 +95,18 @@ https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list, tag=GitHub, force-policy=美国节点, update-interval=604800, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list, tag=GitHub, force-policy=美国节点, update-interval=604800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag=哔哩哔哩, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 [filter_local]
-host-suffix, ddgksf2013.top, proxy
-host, sdkapp.uve.weibo.com, direct
-host, ad.12306.cn, direct
 host-keyword, sooplive, direct
 host-keyword, cloudflare, proxy
 host-keyword, bitwarden, direct
-host, pass.saxinx.cn, proxy
-host-keyword, yrfmba, 兜底分流
 host-keyword, amazon, direct
 host-keyword, ouonet, emby
-host-keyword, github, proxy
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
