@@ -16,8 +16,6 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 [rewrite_local]
 
 [rewrite_remote]
-# 保留用户已有模块默认开关；Lite 与正式版可能重叠，因此 Lite 默认关闭
-# 同一 URL (含 github/raw 镜像) 只保留一个重写订阅
 https://ddgksf2013.top/rewrite/BiliBiliAdsLite.conf, tag=哔哩哔哩净化Lite[可选], update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/amiglistimo/Quantumult-X/refs/heads/main/Rewrite/NSFW.conf, tag=NSFW, update-interval=172800, opt-parser=true, enabled=false
 https://ddgksf2013.top/scripts/bdmap.ads.js, tag=百度地图去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
@@ -56,15 +54,12 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 [server_local]
 
 [server_remote]
-# 前三条为原有私人订阅且完整保留
-# 墨鱼公共临时订阅仅做备用，默认关闭
 https://c7a91e3b-84d2-4c6f-9b71-2e8d4a6f3c11.com/sabusuku?token=55c3f0cc341a3dbbc28d5df0bbaeff21, tag=cat, update-interval=172800, opt-parser=true, enabled=false
 https://oss1-china-alibaba-bucket.selectgroup.click/api/graphql?token=4ab099be5428b2889b74e7ff61a66d1d, tag=OuO, update-interval=172800, opt-parser=true, enabled=true
 https://dash.xn--cp3a08l.com/api/v1/pq/c74d488b19189e94dc803d9b1f444a8c, tag=赔钱, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml#delreg=.*&rename=@tg%40ddgksf2021-+@num-$index7, tag=墨鱼临时订阅[可选], update-interval=3600, opt-parser=true, enabled=false
 
 [dns]
-# 保留用户 DoH 和域名 DNS 映射；223.5.5.5 为新增普通 DNS 备用
 no-ipv6
 no-system
 server=119.29.29.29
@@ -80,7 +75,6 @@ alias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com
 doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.1.1.1/dns-query
 
 [policy]
-# 保留原手动选择策略组；没有强行切换到墨鱼自动测速
 static=emby, proxy, direct,server-tag-regex=(?<!\d)0\.0?1(?!\d), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 static=苹果服务, direct, proxy, 香港节点, 台湾节点, 美国节点, 日本节点, 狮城节点, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 自动选择, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
@@ -96,8 +90,6 @@ static=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(
 static=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 
 [filter_remote]
-# 规则修正放在广告拦截之前，AI 等专用规则置于通用代理规则之前
-# 保留原 AI 指定 狮城节点、原 GitHub 指定 proxy；墨鱼 GitHub 美国规则默认关闭
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
@@ -112,9 +104,6 @@ https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.l
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 
 [filter_local]
-# 修正原 DOMAIN-KEYWORD 为 Quantumult X 使用的 host-keyword
-# 新增 upstream 的 12306、微博、墨鱼站点分流
-# 保留原 final, proxy 不改为墨鱼的 兜底分流
 host-suffix, ddgksf2013.top, proxy
 host, sdkapp.uve.weibo.com, direct
 host, ad.12306.cn, direct
@@ -136,10 +125,8 @@ geoip, cn, direct
 final, proxy
 
 [http_backend]
-# 墨鱼当前配置已停用旧 BoxJS HTTP backend；使用 rewrite_remote 中 BoxJS 配置
 
 [mitm]
-# 原 MitM 证书 p12 和 passphrase 原样保留（勿外传）
 skip_validating_cert = true
 force_sni_domain_name = false
 hostname = -testflight.apple.com, -*.fcbox.com, -*huami.com, -*amemv.com, -*snssdk.com, -www.google.com, *.google.cn, *.googlevideo.com, boxjs.com, boxjs.net
