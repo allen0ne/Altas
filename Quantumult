@@ -16,21 +16,15 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 [rewrite_local]
 
 [rewrite_remote]
-https://ddgksf2013.top/rewrite/BiliBiliAdsLite.conf, tag=哔哩哔哩净化Lite, update-interval=86400, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/amiglistimo/Quantumult-X/refs/heads/main/Rewrite/NSFW.conf, tag=NSFW, update-interval=172800, opt-parser=true, enabled=false
-https://ddgksf2013.top/scripts/bdmap.ads.js, tag=百度地图去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/Html/Douban.conf, tag=豆瓣网页观影快捷跳转, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/GoogleCAPTCHA.snippet, tag=Google人机功能增强@NobyDa, update-interval=86400, opt-parser=false, enabled=true
-https://ddgksf2013.top/rewrite/CaiXinAds.conf, tag=财新, update-interval=172800, opt-parser=true, enabled=false
 https://ddgksf2013.top/rewrite/AiHuiShouAds.conf, tag=爱回收去广告@ddgksf2013, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/GoofishAds.conf, tag=闲鱼净化, update-interval=86400, opt-parser=false, enabled=true
 https://ddgksf2013.top/scripts/v2ex.ads.js, tag=V2ex网页去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
 https://ddgksf2013.top/scripts/vis.vip.js, tag=Vis会员解锁@ddgksf2013, update-interval=86400, opt-parser=true, enabled=false
 https://ddgksf2013.top/rewrite/StartUpAds.conf, tag=通用开屏去广告, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/chxm1023/Advertising/refs/heads/main/AppAd.conf, tag=广告终结者, update-interval=172800, opt-parser=true, enabled=true
-https://ddgksf2013.top/rewrite/XiaoHongShuBlockVideo.conf, tag=xhs, update-interval=172800, opt-parser=false, enabled=false
 https://ddgksf2013.top/rewrite/XiaoHongShuAds.conf, tag=小红书去广告+去水印, update-interval=86400, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf, tag=中国联通去广告, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf, tag=中国联通去广告, update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/Applet.conf, tag=微信小程序去广告, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, tag=酷安去广告, update-interval=86400, opt-parser=true, enabled=true
 https://ddgksf2013.top/scripts/zhihu.ads.js, tag=知乎净化助手, update-interval=86400, opt-parser=true, enabled=true
@@ -40,12 +34,8 @@ https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf, tag=彩
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=Youtube去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/WeiboAds.conf, tag=微博去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/AmapAds.conf, tag=高德地图净化, update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/NeteaseAds.conf, tag=网易云净化, update-interval=86400, opt-parser=false, enabled=true
-https://ddgksf2013.top/module/JavDB.WebEnhance.sgmodule, tag=JavDB优化, update-interval=172800, opt-parser=true, enabled=true
 https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩哔哩净化, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=Spotify增强, update-interval=86400, opt-parser=false, enabled=true
-https://ddgksf2013.top/scripts/bdpan.ads.js, tag=百度网盘净化, update-interval=86400, opt-parser=true, enabled=true
-https://ddgksf2013.top/scripts/bdpan.unlock.js, tag=百度网盘倍速, update-interval=86400, opt-parser=true, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/Html/Q-Search.conf, tag=Safari超级搜索, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/Html/General.conf, tag=Google重定向, update-interval=86400, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/UnblockURLinWeChat.conf, tag=微信Url重定向, update-interval=86400, opt-parser=false, enabled=true
@@ -75,32 +65,37 @@ alias = /iosapps.itunes.apple.com/iosapps.itunes.apple.com.download.ks-cdn.com
 doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.1.1.1/dns-query
 
 [policy]
-static=emby, proxy, direct,server-tag-regex=(?<!\d)0\.0?1(?!\d), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+static=emby, emby-自动测速, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+url-latency-benchmark=emby-自动测速, server-tag-regex=^(?=.*新加坡)(?=.*(?<!\d)0\.1(?!\d)).*$, check-interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+
 static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 菲律宾节点, 印度节点, 韩国节点, 德国节点, 英国节点, 土耳其节点, 尼日利亚节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
-static=香港节点, server-tag-regex=(?i)^(?=.*(?:🇭🇰|香港|Hong[\s-]*Kong|港|(?<![A-Za-z])HK(?![A-Za-z])))(?!.*(?:🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Taiwan|Japan|Singapore|America|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:TW|JP|SG|US|PH|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-static=台湾节点, server-tag-regex=(?i)^(?=.*(?:🇹🇼|台湾|台灣|臺灣|Taiwan|Tai[\s-]*Wan|台|臺|(?<![A-Za-z])TW(?![A-Za-z])))(?!.*(?:🇭🇰|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Japan|Singapore|America|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|JP|SG|US|PH|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-static=日本节点, server-tag-regex=(?i)^(?=.*(?:🇯🇵|日本|Japan|Tokyo|Osaka|日|(?<![A-Za-z])JP(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Singapore|America|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|SG|US|PH|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-static=狮城节点, server-tag-regex=(?i)^(?=.*(?:🇸🇬|新加坡|狮城|獅城|Singapore|新|狮|獅|(?<![A-Za-z])SG(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|America|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|US|PH|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-static=美国节点, server-tag-regex=(?i)^(?=.*(?:🇺🇸|美国|美國|USA|United[\s-]*States|America(?:n)?|美|(?<![A-Za-z])US(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|PH|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-static=菲律宾节点, server-tag-regex=(?i)^(?=.*(?:🇵🇭|菲律宾|菲律賓|Philippines|(?<![A-Za-z])PH(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|印度|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|India|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|IN|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Philippines.png
-static=印度节点, server-tag-regex=(?i)^(?=.*(?:🇮🇳|印度|India|(?<![A-Za-z])IN(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇰🇷|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|韩国|韓國|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|Korea|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|KR|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
-static=韩国节点, server-tag-regex=(?i)^(?=.*(?:🇰🇷|韩国|韓國|Korea|韩|韓|(?<![A-Za-z])KR(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇩🇪|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|德国|德國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|India|Germany|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|IN|DE|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-static=德国节点, server-tag-regex=(?i)^(?=.*(?:🇩🇪|德国|德國|Germany|(?<![A-Za-z])DE(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇬🇧|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|英国|英國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|India|Korea|Britain|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|IN|KR|UK|GB|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
-static=英国节点, server-tag-regex=(?i)^(?=.*(?:🇬🇧|英国|英國|United[\s-]*Kingdom|Britain|(?<![A-Za-z])(?:UK|GB)(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇹🇷|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|土耳其|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|India|Korea|Germany|Turkey|Türkiye|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|IN|KR|DE|TR|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
-static=土耳其节点, server-tag-regex=(?i)^(?=.*(?:🇹🇷|土耳其|Turkey|Türkiye|Turkiye|(?<![A-Za-z])TR(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇳🇬|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|尼日利亚|尼日利亞|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|India|Korea|Germany|Britain|Nigeria|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|IN|KR|DE|UK|GB|NG)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
-static=尼日利亚节点, server-tag-regex=(?i)^(?=.*(?:🇳🇬|尼日利亚|尼日利亞|Nigeria|(?<![A-Za-z])NG(?![A-Za-z])))(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|🇵🇭|🇮🇳|🇰🇷|🇩🇪|🇬🇧|🇹🇷|香港|台湾|台灣|臺灣|日本|新加坡|狮城|獅城|美国|美國|菲律宾|菲律賓|印度|韩国|韓國|德国|德國|英国|英國|土耳其|Hong[\s-]*Kong|Taiwan|Japan|Singapore|America|Philippines|India|Korea|Germany|Britain|Turkey|Türkiye|(?<![A-Za-z])(?:HK|TW|JP|SG|US|PH|IN|KR|DE|UK|GB|TR)(?![A-Za-z])|回国|官网|客服|订阅|流量|到期|剩余|套餐)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Africa_Map.png
+static=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+static=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan|Tai Wan))^((?!(港|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+static=日本节点, server-tag-regex=(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+static=狮城节点, server-tag-regex=(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+static=美国节点, server-tag-regex=(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+static=菲律宾节点, server-tag-regex=(?i)(菲律宾|Philippines|AnyTLS\.PH), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Philippines.png
+static=印度节点, server-tag-regex=(?i)(印度|India|AnyTLS\.IN), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
+static=韩国节点, server-tag-regex=(?i)(韩国|韓國|Korea|AnyTLS\.KR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+static=德国节点, server-tag-regex=(?i)(德国|德國|Germany|AnyTLS\.DE), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
+static=英国节点, server-tag-regex=(?i)(英国|英國|United Kingdom|AnyTLS\.UK), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
+static=土耳其节点, server-tag-regex=(?i)(土耳其|Turkey|Türkiye|AnyTLS\.TR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
+static=尼日利亚节点, server-tag-regex=(?i)(尼日利亚|尼日利亞|Nigeria|AnyTLS\.NG), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Africa_Map.png
+[filter_remote]
 https://ddgksf2013.top/filter/Ai.yaml, tag=ai, force-policy=韩国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/qx.conf, tag=广告终结者, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list, tag=微信直连, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/ddgksf2013/Filter/master/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GitHub/GitHub.list, tag=GitHub, force-policy=美国节点, update-interval=604800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=Spotify音乐, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag=哔哩哔哩, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 [filter_local]
+host-keyword, surrit, emby
+host-keyword, missav, emby
+host-keyword, googlevideo, emby
+host-keyword, youtube, emby
 host-keyword, sooplive, direct
 host-keyword, cloudflare, proxy
 host-keyword, bitwarden, direct
