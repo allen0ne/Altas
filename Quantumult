@@ -80,6 +80,7 @@ static=德国节点, server-tag-regex=(?i)(德国|德國|Germany|AnyTLS\.DE), im
 static=英国节点, server-tag-regex=(?i)(英国|英國|United Kingdom|AnyTLS\.UK), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
 static=土耳其节点, server-tag-regex=(?i)(土耳其|Turkey|Türkiye|AnyTLS\.TR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
 static=尼日利亚节点, server-tag-regex=(?i)(尼日利亚|尼日利亞|Nigeria|AnyTLS\.NG), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Africa_Map.png
+
 [filter_remote]
 https://ddgksf2013.top/filter/Ai.yaml, tag=ai, force-policy=韩国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
@@ -90,6 +91,7 @@ https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+
 [filter_local]
 host-keyword, surrit, emby
 host-keyword, missav, emby
