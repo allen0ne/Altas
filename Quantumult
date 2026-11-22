@@ -19,8 +19,6 @@ event-interaction https://ddgksf2013.top/scripts/server-info-pure.js, tag=节点
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/GoogleCAPTCHA.snippet, tag=Google人机功能增强@NobyDa, update-interval=86400, opt-parser=false, enabled=true
 https://ddgksf2013.top/rewrite/AiHuiShouAds.conf, tag=爱回收去广告@ddgksf2013, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/GoofishAds.conf, tag=闲鱼净化, update-interval=86400, opt-parser=false, enabled=true
-https://ddgksf2013.top/scripts/v2ex.ads.js, tag=V2ex网页去广告@ddgksf2013, update-interval=86400, opt-parser=true, enabled=true
-https://ddgksf2013.top/scripts/vis.vip.js, tag=Vis会员解锁@ddgksf2013, update-interval=86400, opt-parser=true, enabled=false
 https://ddgksf2013.top/rewrite/StartUpAds.conf, tag=通用开屏去广告, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/chxm1023/Advertising/refs/heads/main/AppAd.conf, tag=广告终结者, update-interval=172800, opt-parser=true, enabled=true
 https://ddgksf2013.top/rewrite/XiaoHongShuAds.conf, tag=小红书去广告+去水印, update-interval=86400, opt-parser=false, enabled=true
@@ -30,9 +28,7 @@ https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, tag=酷�
 https://ddgksf2013.top/scripts/zhihu.ads.js, tag=知乎净化助手, update-interval=86400, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepAds.conf, tag=Keep去广告, update-interval=172800, opt-parser=true, enabled=false
 https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/XiaoYuZhouAds.conf, tag=小宇宙去广告, update-interval=172800, opt-parser=true, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf, tag=彩云天气净化, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=Youtube去广告, update-interval=86400, opt-parser=false, enabled=true
-https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/WeiboAds.conf, tag=微博去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/AmapAds.conf, tag=高德地图净化, update-interval=86400, opt-parser=false, enabled=true
 https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩哔哩净化, update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=Spotify增强, update-interval=86400, opt-parser=false, enabled=true
@@ -67,7 +63,6 @@ doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.
 [policy]
 static=emby, emby-自动测速, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 url-latency-benchmark=emby-自动测速, server-tag-regex=^(?:(?=.*新加坡)(?=.*(?<!\d)0\.1(?!\d))|.*WS新加坡).*$, check-interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-
 static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 菲律宾节点, 印度节点, 韩国节点, 德国节点, 英国节点, 土耳其节点, 尼日利亚节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 static=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 static=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan|Tai Wan))^((?!(港|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
