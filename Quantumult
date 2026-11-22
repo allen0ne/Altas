@@ -34,7 +34,7 @@ https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf, tag=彩
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/YoutubeAds.conf, tag=Youtube去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/WeiboAds.conf, tag=微博去广告, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/AmapAds.conf, tag=高德地图净化, update-interval=86400, opt-parser=false, enabled=true
-https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩哔哩净化, update-interval=86400, opt-parser=false, enabled=true
+https://ddgksf2013.top/rewrite/BiliBiliAds.conf, tag=哔哩哔哩净化, update-interval=86400, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.conf, tag=Spotify增强, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/Html/Q-Search.conf, tag=Safari超级搜索, update-interval=86400, opt-parser=false, enabled=true
 https://github.com/ddgksf2013/Rewrite/raw/master/Html/General.conf, tag=Google重定向, update-interval=86400, opt-parser=false, enabled=true
@@ -67,6 +67,7 @@ doh-server=https://dns.alidns.com/dns-query,https://doh.pub/dns-query,https://1.
 [policy]
 static=emby, emby-自动测速, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 url-latency-benchmark=emby-自动测速, server-tag-regex=^(?=.*新加坡)(?=.*(?<!\d)0\.1(?!\d)).*$, check-interval=300, tolerance=50, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+
 static=全球加速, proxy, emby, direct, 美国节点, 台湾节点, 香港节点, 日本节点, 狮城节点, 菲律宾节点, 印度节点, 韩国节点, 德国节点, 英国节点, 土耳其节点, 尼日利亚节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 static=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 static=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan|Tai Wan))^((?!(港|日|韩|新|美)).)*$, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
@@ -80,7 +81,6 @@ static=德国节点, server-tag-regex=(?i)(德国|德國|Germany|AnyTLS\.DE), im
 static=英国节点, server-tag-regex=(?i)(英国|英國|United Kingdom|AnyTLS\.UK), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
 static=土耳其节点, server-tag-regex=(?i)(土耳其|Turkey|Türkiye|AnyTLS\.TR), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
 static=尼日利亚节点, server-tag-regex=(?i)(尼日利亚|尼日利亞|Nigeria|AnyTLS\.NG), img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Africa_Map.png
-
 [filter_remote]
 https://ddgksf2013.top/filter/Ai.yaml, tag=ai, force-policy=韩国节点, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Filter/master/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
@@ -91,17 +91,16 @@ https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-
 [filter_local]
-host-keyword, ouonet, emby
-host-keyword, surrit, emby
-host-keyword, missav, emby
+#host-keyword, surrit, emby
+#host-keyword, missav, emby
 host-keyword, googlevideo, emby
 host-keyword, youtube, emby
 host-keyword, sooplive, direct
 host-keyword, cloudflare, proxy
 host-keyword, bitwarden, direct
 host-keyword, amazon, direct
+host-keyword, ouonet, emby
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
